@@ -10,7 +10,6 @@ window.onload = function() {
         }
         document.getElementById('loader').style.display = 'none';
         document.getElementById('contenido').style.display = 'block';
-        manejarBotonFlotante(); // Añade esta línea
     }, 1000);
 }
 
@@ -90,25 +89,4 @@ function borrarHistorial() {
     actualizarHistorialUI();
 }
 
-// Añade esto al final del archivo
 document.getElementById('borrarHistorial').addEventListener('click', borrarHistorial);
-
-function manejarBotonFlotante() {
-    const boton = document.getElementById('botonFlotante');
-    const container = document.querySelector('.container');
-    const logo = document.getElementById('logo');
-    const borrarHistorial = document.getElementById('borrarHistorial');
-
-    function actualizarBoton() {
-        if (container.scrollTop > 0) {
-            boton.innerHTML = '<i class="fas fa-chevron-up"></i>';
-            boton.onclick = () => logo.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            boton.innerHTML = '<i class="fas fa-chevron-down"></i>';
-            boton.onclick = () => borrarHistorial.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-    container.addEventListener('scroll', actualizarBoton);
-    actualizarBoton(); // Llamada inicial para establecer el estado correcto
-}
