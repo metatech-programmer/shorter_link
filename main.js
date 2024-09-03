@@ -108,12 +108,9 @@ function manejarBotonFlotante() {
     if (container.scrollTop > 10) {
       ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
       ancle.onclick = () => ancle.setAttribute("href", "#up");
-      alert(container.scrollTop, "arriba");
-    }
-    if (container.scrollTop < 10) {
+    } else {
       ancle.innerHTML = '<i class="fas fa-chevron-down"></i>';
       ancle.onclick = () => ancle.setAttribute("href", "#borrarHistorial");
-      alert(container.scrollTop, "abajo");
     }
   }
 
