@@ -14,7 +14,6 @@ window.onload = function () {
   }, 1000);
 };
 
-
 async function acortarURL() {
   const urlInput = document.getElementById("urlInput");
   const resultado = document.getElementById("resultado");
@@ -108,10 +107,18 @@ function manejarBotonFlotante() {
   function actualizarBoton() {
     if (container.scrollTop > 16.3) {
       ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
-      ancle.onclick = () => ancle.setAttribute("href", "#container");
+      ancle.onclick = () =>
+        ancle.setAttribute("href", "#container").scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
     } else {
       ancle.innerHTML = '<i class="fas fa-chevron-down"></i>';
-      ancle.onclick = () => ancle.setAttribute("href", "#borrarHistorial");
+      ancle.onclick = () =>
+        ancle.setAttribute("href", "#borrarHistorial").scrollTo({
+          top: 1000,
+          behavior: "smooth",
+        });
     }
   }
 
