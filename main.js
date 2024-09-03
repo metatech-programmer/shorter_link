@@ -10,6 +10,7 @@ window.onload = function() {
         }
         document.getElementById('loader').style.display = 'none';
         document.getElementById('contenido').style.display = 'block';
+        manejarBotonFlotante(); // Añade esta línea
     }, 1000);
 }
 
@@ -91,3 +92,21 @@ function borrarHistorial() {
 
 // Añade esto al final del archivo
 document.getElementById('borrarHistorial').addEventListener('click', borrarHistorial);
+
+function manejarBotonFlotante() {
+    const boton = document.getElementById('botonFlotante');
+    const container = document.querySelector('.container');
+
+    function actualizarBoton() {
+        if (container.scrollTop > 20) {
+            boton.innerHTML = '<i class="fas fa-chevron-up"></i>';
+            boton.onclick = () => container.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            boton.innerHTML = '<i class="fas fa-chevron-down"></i>';
+            boton.onclick = () => container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
+        }
+    }
+
+    container.addEventListener('scroll', actualizarBoton);
+    actualizarBoton(); // Llamada inicial para establecer el estado correcto
+}

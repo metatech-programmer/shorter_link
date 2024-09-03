@@ -143,6 +143,28 @@ a:active {
   .logo {
     margin-top: 3rem;
   }
+
+  #botonFlotante {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s;
+  }
+
+  #botonFlotante:hover {
+    background-color: #2980b9;
+  }
 }
 
 .borrar-historial {
