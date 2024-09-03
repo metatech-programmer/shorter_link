@@ -100,7 +100,7 @@ function manejarBotonFlotante() {
     const borrarHistorial = document.getElementById('borrarHistorial');
 
     function actualizarBoton() {
-        if (container.scrollTop > logo.offsetTop) {
+        if (container.scrollTop > 0) {
             boton.innerHTML = '<i class="fas fa-chevron-up"></i>';
             boton.onclick = () => logo.scrollIntoView({ behavior: 'smooth' });
         } else {
