@@ -116,7 +116,7 @@ function actualizarBoton(ancle) {
     ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
     ancle.href = "#borrarHistorial";
   } else {
-    ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    ancle.innerHTML = '<i class="fas fa-chevron-down"></i>';
     ancle.href = "#borrarHistorial";
   }
 }
