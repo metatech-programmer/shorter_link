@@ -108,7 +108,7 @@ function manejarBotonFlotante() {
   function actualizarBoton() {
     if (container.scrollTop > 16.3) {
       ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
-      ancle.onclick = () => ancle.setAttribute("href", "#up");
+      ancle.onclick = () => ancle.setAttribute("href", "#container");
     } else {
       ancle.innerHTML = '<i class="fas fa-chevron-down"></i>';
       ancle.onclick = () => ancle.setAttribute("href", "#borrarHistorial");
