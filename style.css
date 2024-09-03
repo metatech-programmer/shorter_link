@@ -140,6 +140,9 @@ a:active {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .logo {
+    margin-top: 3rem;
+  }
 }
 
 .borrar-historial {
