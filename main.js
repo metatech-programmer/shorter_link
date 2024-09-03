@@ -105,10 +105,10 @@ function manejarBotonFlotante() {
   const container = document.querySelector(".container");
 
   container.addEventListener("scroll", actualizarBoton);
-  actualizarBoton(); // Llamada inicial para establecer el estado correcto
+  actualizarBoton(ancle); // Llamada inicial para establecer el estado correcto
 }
 
-function actualizarBoton() {
+function actualizarBoton(ancle) {
   if (document.URL.includes("#borrarHistorial")) {
     ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
     ancle.href = "#container";
