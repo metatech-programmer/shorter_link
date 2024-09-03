@@ -96,14 +96,16 @@ document.getElementById('borrarHistorial').addEventListener('click', borrarHisto
 function manejarBotonFlotante() {
     const boton = document.getElementById('botonFlotante');
     const container = document.querySelector('.container');
+    const logo = document.getElementById('logo');
+    const borrarHistorial = document.getElementById('borrarHistorial');
 
     function actualizarBoton() {
-        if (container.scrollTop > 0) {
+        if (container.scrollTop > logo.offsetTop) {
             boton.innerHTML = '<i class="fas fa-chevron-up"></i>';
-            boton.onclick = () => container.scrollTo({ top: 100, behavior: 'smooth' });
+            boton.onclick = () => logo.scrollIntoView({ behavior: 'smooth' });
         } else {
             boton.innerHTML = '<i class="fas fa-chevron-down"></i>';
-            boton.onclick = () => container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
+            boton.onclick = () => borrarHistorial.scrollIntoView({ behavior: 'smooth' });
         }
     }
 
