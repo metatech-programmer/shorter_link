@@ -139,6 +139,7 @@ a:active {
     padding-bottom: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    scroll-behavior: smooth;
   }
   .logo {
     margin-top: 3rem;
@@ -155,15 +156,21 @@ a:active {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 24px;
+    font-size: 34px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: background-color 0.3s;
+    text-align: center;
   }
 
   #botonFlotante:hover {
     background-color: #2980b9;
+  }
+  i{
+    color: white;
+    font-size: 1.5rem;
+    margin: auto;
   }
 }
 
