@@ -13,9 +13,7 @@ window.onload = function () {
     manejarBotonFlotante();
   }, 1000);
 };
-window.addEventListener("scroll", () => {
-  manejarBotonFlotante;
-});
+
 
 async function acortarURL() {
   const urlInput = document.getElementById("urlInput");
