@@ -98,7 +98,7 @@ function manejarBotonFlotante() {
     const container = document.querySelector('.container');
 
     function actualizarBoton() {
-        if (container.scrollTop > 20) {
+        if (container.scrollTop > 0) {
             boton.innerHTML = '<i class="fas fa-chevron-up"></i>';
             boton.onclick = () => container.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
