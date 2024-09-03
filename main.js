@@ -110,13 +110,13 @@ function manejarBotonFlotante() {
 
 function actualizarBoton(ancle) {
   if (document.URL.includes("#borrarHistorial")) {
-    ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    ancle.innerHTML = '<i class="fas fa-chevron-down"></i>';
     ancle.href = "#container";
   } else if (document.URL.includes("#container")) {
-    ancle.innerHTML = '<i class="fas fa-chevron-down"></i>';
+    ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
     ancle.href = "#borrarHistorial";
   } else {
-    ancle.innerHTML = '<i class="fas fa-chevron-down"></i>';
+    ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
     ancle.href = "#borrarHistorial";
   }
 }
