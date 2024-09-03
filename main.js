@@ -108,14 +108,14 @@ function manejarBotonFlotante() {
     if (container.scrollTop > 16.3) {
       ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
       ancle.onclick = () =>
-        ancle.setAttribute("href", "#container").scrollTo({
-          top: 0,
+        ancle.scrollTo({
+          top: -1000,
           behavior: "smooth",
         });
     } else {
       ancle.innerHTML = '<i class="fas fa-chevron-down"></i>';
       ancle.onclick = () =>
-        ancle.setAttribute("href", "#borrarHistorial").scrollTo({
+        ancle.scrollTo({
           top: 1000,
           behavior: "smooth",
         });
