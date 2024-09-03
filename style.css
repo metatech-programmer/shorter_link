@@ -12,6 +12,7 @@ body {
   height: 100vh;
   margin: 0;
   background-color: var(--color-fondo);
+  
 }
 .container {
   background-color: white;
@@ -129,4 +130,13 @@ a:active {
 }
 .contenido {
   display: none;
+}
+
+@media screen and (max-width: 400px)        {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
 }
