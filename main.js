@@ -105,7 +105,7 @@ function manejarBotonFlotante() {
   const container = document.querySelector(".container");
 
   function actualizarBoton() {
-    if (container.scrollTop > 0) {
+    if (container.scrollTop > 50) {
       ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
       ancle.onclick = () => ancle.setAttribute("href", "#up");
     } 
