@@ -105,20 +105,13 @@ function manejarBotonFlotante() {
   const container = document.querySelector(".container");
 
   function actualizarBoton() {
-    if (container.scrollTop > 16.3) {
+    if (document.URL.includes("#borrarHistorial")) {
       ancle.innerHTML = '<i class="fas fa-chevron-up"></i>';
-      ancle.onclick = () =>
-        ancle.scrollTo({
-          top: -1000,
-          behavior: "smooth",
-        });
-    } else {
+      ancle.href = "#container";
+    }
+    if (document.URL.includes("#contenido")) {
       ancle.innerHTML = '<i class="fas fa-chevron-down"></i>';
-      ancle.onclick = () =>
-        ancle.scrollTo({
-          top: 1000,
-          behavior: "smooth",
-        });
+      ancle.href = "#borrarHistorial";
     }
   }
 

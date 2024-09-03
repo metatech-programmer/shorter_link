@@ -37,7 +37,7 @@
         <div id="loader" class="loader">
             <i class="fas fa-spinner fa-spin"></i>
         </div>
-        <div id="contenido" class="contenido" onscroll="manejarBotonFlotante()">
+        <div id="contenido" class="contenido">
             <img src="./icon.png" alt="shorter_link Logo" class="logo" id="logo">
             <h1>Acortar URL <i class="fas fa-link"></i></h1>
             <input type="url" id="urlInput" placeholder="Ingresa la URL aquí">
@@ -50,9 +50,9 @@
             <button id="borrarHistorial" class="borrar-historial">Borrar historial</button>
         </div>
     </div>
-    <button id="botonFlotante" aria-label="Desplazarse" onclick="manejarBotonFlotante()">
+    <a id="botonFlotante" aria-label="Desplazarse" >
         <i class="fas fa-chevron-up"></i>
-    </button>
+    </a>
     <script src="main.js"></script>
 
 </body>
