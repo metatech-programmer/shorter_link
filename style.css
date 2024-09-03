@@ -136,7 +136,24 @@ a:active {
   .container {
     width: 100%;
     height: 100%;
+    padding: 1rem;
   }
+
   
-  
+}
+
+.borrar-historial {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.borrar-historial:hover {
+  background-color: #c0392b;
 }

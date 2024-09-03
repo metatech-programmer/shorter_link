@@ -82,3 +82,12 @@ function copiarAlPortapapeles(texto, boton) {
         console.error('Error al copiar: ', err);
     });
 }
+
+function borrarHistorial() {
+    historial = [];
+    localStorage.removeItem('historial');
+    actualizarHistorialUI();
+}
+
+// Añade esto al final del archivo
+document.getElementById('borrarHistorial').addEventListener('click', borrarHistorial);
